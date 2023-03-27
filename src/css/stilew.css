@@ -1,0 +1,109 @@
+.body {width: 1280px;
+        margin: 0 auto;
+        font-family: 'Poppins',sans-serif;
+    }
+    main:after{
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+        z-index: -1;
+
+    }
+
+    .conteudo{
+        margin-left: 250px ;
+        /* background-color: aqua; */
+              min-height: 100vh;
+               display: flex;
+                flex-direction: column;
+                justify-content:space-evenly; 
+                }
+    /* .informacoes{background-color:blueviolet ;} */
+
+    .informacoes .logo{
+        width: 350px;
+        filter: invert(1);
+        margin-bottom: 45px;
+    }
+    .informacoes .descricao{
+        width:49%;
+        font-size: 24px;
+        line-height: 25px;
+        color: #ffffff;
+    }
+
+    .botoes-carrosel{
+        /* background-color: black; */
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        }
+    .botoes-carrosel .botao{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-color:#ffffff ;
+        
+    }
+    .botoes-carrosel .botao.selecionado{background-color: darkgreen;}
+
+    
+
+    
+    .menu-lateral{
+        /* background-color: burlywood; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;}
+        
+        .menu-lateral .icone{
+            width: 30px;
+            filter: invert(1);
+        transition: 0.3s ease-in-out;}
+
+            .menu-lateral .icone:hover{transform: scale(1.2);}
+
+        .menu-lateral ul{display: flex;
+                         flex-direction: column;
+                        gap: 15px;}
+
+          .carrossel{
+            width: 100vw;
+            height: 100vw;
+            position: fixed;
+            
+            z-index: -1;}  
+            
+            .carrossel .imagem{
+                width: 100vw;
+                min-height: 100vh;
+                object-fit: cover;
+                animation: mudarimagem 0.7s;
+                display: none; 
+                }
+
+               .carrossel .imagem.ativa{display: block;} 
+
+@keyframes mudarimagem{
+    from{
+        opacity:  0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
+    
+    
+     
+    
